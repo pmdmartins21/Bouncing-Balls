@@ -3,22 +3,29 @@ export default {
   name: "App",
   data() {
     return {
-      counter: 0,
+      MouseX: null,
+      MouseY: null,
     }
   },
   methods: {
-    clickedBackground() {
+    //function to instantiate and launch a ball passing the coordinates as props.
+    clickedBackground(event: MouseEvent) {
       console.log("clicked background");
+      //get the coordinates and save them in the variables
+      this.MouseX = event.pageX;
+      this.MouseY = event.pageY;
     },
   },
 };
 </script>
 
 <template >
-  <body @click="clickedBackground">
+  <body @click="clickedBackground ">
     <div class="container">
-      <div class="box">
-      </div>
+      <p>Coordenadas</p>
+      <p>X: {{ MouseX }}</p>
+      <p>Y: {{ MouseY }}</p>
+      <div class="box"></div>
     </div>
   </body>
   
