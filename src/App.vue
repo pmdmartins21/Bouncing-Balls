@@ -1,27 +1,31 @@
 <script lang="ts">
+import BallsItems from "./components/Balls-items.vue";
+
 export default {
-  name: "App",
-  data() {
-    return {
-      MouseX: null,
-      MouseY: null,
-    }
-  },
-  methods: {
-    //function to instantiate and launch a ball passing the coordinates as props.
-    clickedBackground(event: MouseEvent) {
-      console.log("clicked background");
-      //get the coordinates and save them in the variables
-      this.MouseX = event.pageX;
-      this.MouseY = event.pageY;
+    name: "App",
+    data() {
+        return {
+            MouseX: null,
+            MouseY: null,
+        };
     },
-  },
+    methods: {
+        //function to instantiate and launch a ball passing the coordinates as props.
+        clickedBackground(event: MouseEvent) {
+            console.log("clicked background");
+            //get the coordinates and save them in the variables
+            this.MouseX = event.pageX;
+            this.MouseY = event.pageY;
+        },
+    },
+    components: { BallsItems }
 };
 </script>
 
 <template >
-  <body @click="clickedBackground ">
+  <body @click="clickedBackground">
     <div class="container">
+      <BallsItems/>
       <p>Coordenadas</p>
       <p>X: {{ MouseX }}</p>
       <p>Y: {{ MouseY }}</p>
