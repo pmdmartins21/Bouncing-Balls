@@ -11,8 +11,9 @@ export default {
         height: '4rem',
         backgroundColor: 'black',
         borderRadius: '2rem',
-        top: this.ball.posY,
-        left: this.ball.posX,
+        top: `${this.ball.posY - 30}px`,
+        left: `${this.ball.posX -30}px`,
+        position: 'absolute'
       },
     };
   },
