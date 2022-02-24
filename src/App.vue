@@ -25,8 +25,8 @@ export default {
         posY: mouseY,
         size: radius,
         direction: {
-          x: 20,
-          y: 20,
+          x: -100 + Math.floor(Math.random() * 200),
+          y: -100 + Math.floor(Math.random() * 200),
         }
       };
 
@@ -41,7 +41,7 @@ export default {
   <body @click="clickedBackground">
     <div class="container">
       <BallsItems :balls="balls" />
-      <canvas class="box"></canvas>
+      <canvas class="box" style="top:0px; left:0px"></canvas>
     </div>
   </body>
   
@@ -49,10 +49,10 @@ export default {
 
 <style>
 .box {
-  width: 2500px;
-  height: 1200px;
+  width: 1200px;
+  height: 600px;
   display: flex;
-  border: 5px #333 solid;
-  margin: auto;
+  border: 10px #333 solid;
+  position: absolute;
 }
 </style>
