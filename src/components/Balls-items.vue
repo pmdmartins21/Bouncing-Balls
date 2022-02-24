@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <div :key="ball.id" v-for="ball in balls">
+  <div :key="balls.id" v-for="ball in balls">
     <BallItem :ball="ball" />
   </div>
 </template>
