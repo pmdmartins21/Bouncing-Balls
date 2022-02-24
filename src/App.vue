@@ -25,8 +25,8 @@ export default {
         posY: mouseY,
         size: radius,
         direction: {
-          x: 1,
-          y: 1,
+          x: 20,
+          y: 20,
         }
       };
 
@@ -49,7 +49,7 @@ export default {
 
 <style>
 .box {
-  width: 2520px;
+  width: 2500px;
   height: 1200px;
   display: flex;
   border: 5px #333 solid;
