@@ -4,6 +4,9 @@ export default {
   props: {
     ball: Object,
   },
+  mounted() {
+    setInterval(this.update, 50);
+  },
   data() {
     return {
       ballInfo : {
@@ -11,11 +14,22 @@ export default {
         height: '4rem',
         backgroundColor: 'black',
         borderRadius: '2rem',
-        top: `${this.ball.posY - 30}px`,
-        left: `${this.ball.posX -30}px`,
+        top: `${this.ball.posY - 20}px`,
+        left: `${this.ball.posX - 30}px`,
         position: 'absolute'
       },
+      posX: this.ball.posX,
+      posY: this.ball.posY,
     };
+  },
+  methods: {
+    shout() {
+      console.log("teste")
+    },
+    update() {
+      this.posX += 20;
+      this.ballInfo.left = `${this.posX - 30}px`
+    },
   },
 };
 

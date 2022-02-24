@@ -1,5 +1,3 @@
-
-
 <script lang="ts">
 import BallsItems from "./components/Balls-items.vue";
 
@@ -26,6 +24,10 @@ export default {
         posX: mouseX,
         posY: mouseY,
         size: radius,
+        direction: {
+          x: 1,
+          y: 1,
+        }
       };
 
       this.balls = [... this.balls, newBall];
@@ -39,10 +41,7 @@ export default {
   <body @click="clickedBackground">
     <div class="container">
       <BallsItems :balls="balls" />
-      <p>Coordenadas</p>
-      <p>X: {{ mouseX }}</p>
-      <p>Y: {{ mouseY }}</p>
-      <div class="box"></div>
+      <canvas class="box"></canvas>
     </div>
   </body>
   
@@ -50,8 +49,8 @@ export default {
 
 <style>
 .box {
-  width: 800px;
-  height: 800px;
+  width: 2520px;
+  height: 1200px;
   display: flex;
   border: 5px #333 solid;
   margin: auto;
