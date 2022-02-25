@@ -44,7 +44,9 @@ PosY = PosYi + vt
 ```sh
 git clone git@github.com:pmdmartins21/Bouncing-Balls.git
 ```
-
+```sh
+cd .\Bouncing-Balls\
+```
 ```sh
 npm install
 ```
