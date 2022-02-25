@@ -68,7 +68,7 @@ export default {
     adjustVelocityY() {
       this.ball.velocity.y += this.ball.gravity;
     },
-    //altering the ball positioning
+    //Main method for altering ball positioning
     updateBall() {
       //inverting direction after horizontal/vertical wall hit and adjusting speed by 0.9.
       if (this.checkLimits(this.xAxis)) this.bounceWall(this.xAxis);
