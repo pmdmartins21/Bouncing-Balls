@@ -21,7 +21,7 @@ export default {
         )}`,
         borderRadius: `${this.ball.size / 2}px`,
         top: `${this.ball.posY}px`, //initial Y-axis positioning
-        left: `${this.ball.posX}px`, //initial X-axis positioning
+        left: `${this.ball.posX}px`,//initial X-axis positioning
         position: "absolute",
         transition: `${this.ball.time}ms`,
       },
@@ -47,7 +47,7 @@ export default {
         ? (this.ball.posX = this.maxX - (this.ball.size + 10))
         : this.ball.posX;
       this.ball.posX < 0 ? (this.ball.posX = -10) : this.ball.posX;
-
+      
       //reflecting the movement on the object itself
       this.ballInfo.left = `${this.ball.posX}px`;
 
@@ -55,16 +55,16 @@ export default {
       //adjusting velocityY vector for gravity (v = vo -gt)
       //Since t is included in the update() method we only include gravity
       this.ball.velocity.y += this.ball.gravity;
-
+      
       //move ball Y-axis position by its velocityY vector
       this.ball.posY += this.ball.velocity.y;
-
+      
       //limit y translate into window height, adjusting value if it goes over the limit
       this.ball.posY > this.maxY - this.ball.size
         ? (this.ball.posY = this.maxY - this.ball.size)
         : this.ball.posY;
       this.ball.posY < 0 ? (this.ball.posY = 0) : this.ball.posY;
-
+      
       //reflecting the movement on the object itself
       this.ballInfo.top = `${this.ball.posY}px`;
     },

@@ -40,8 +40,8 @@ export default {
         ),
         //initial velocity vector that includes vx and vy for direction and speed
         velocity: {
-          x: -100 + Math.floor(Math.random() * 200),
-          y: -100 + Math.floor(Math.random() * 200),
+          x: -50 + Math.floor(Math.random() * 100),
+          y: -100 + Math.floor(Math.random() * 50),
         },
         maxX: innerWidth, //passing the maximum X-axis transalation possible
         maxY: innerHeight, //passing the maximum Y-axis transalation possible
