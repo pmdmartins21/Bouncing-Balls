@@ -41,6 +41,9 @@ With this value we can calculate the movement on the Y-axis as the initial value
 PosY = PosYi + vt
 
 ## Project Setup
+```sh
+git clone git@github.com:pmdmartins21/Bouncing-Balls.git
+```
 
 ```sh
 npm install
